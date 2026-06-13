@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adarsh Store | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Adarsh<span>Store</span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html" class="cart-link">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Quality Products, <span>Delivered to You</span></h1>
+    <p>Shop the latest electronics, fashion and lifestyle products at the best prices. Browse our collection and place your enquiry today — we'll get back to you fast!</p>
+    <a href="products.html" class="btn">Shop Now</a>
+    <a href="contact.html" class="btn btn-outline" style="margin-left: 12px;">Contact Us</a>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🚚</div>
+        <h4>Fast Delivery</h4>
+        <p>Quick and reliable shipping across the country.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💬</div>
+        <h4>Easy Enquiry</h4>
+        <p>Ask about any product, we reply within hours.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔒</div>
+        <h4>Secure Process</h4>
+        <p>Your details are safe and used only to contact you.</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⭐</div>
+        <h4>Top Rated</h4>
+        <p>Trusted by hundreds of happy customers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="section">
+    <h2 class="section-title">Featured Products</h2>
+    <p class="section-subtitle">Check out some of our best-selling items</p>
+    <div class="product-grid" id="featuredProducts"></div>
+    <div style="text-align:center; margin-top: 36px;">
+      <a href="products.html" class="btn">View All Products</a>
+    </div>
+  </section>
+
+  <!-- ENQUIRY / BUY NOW MODAL -->
+  <div class="modal-overlay" id="enquiryModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2>Product Enquiry</h2>
+      <p class="modal-subtitle">Fill in your details and we'll get back to you about this product.</p>
+      <form id="enquiryForm">
+        <div class="form-group">
+          <label for="enq-product">Product Name</label>
+          <input type="text" id="enq-product" name="product" readonly />
+        </div>
+        <div class="form-group">
+          <label for="enq-name">Full Name</label>
+          <input type="text" id="enq-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="enq-email">Email Address</label>
+          <input type="email" id="enq-email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="enq-phone">Phone Number</label>
+          <input type="tel" id="enq-phone" name="phone" placeholder="Your phone number" required />
+        </div>
+        <div class="form-group">
+          <label for="enq-message">Message</label>
+          <textarea id="enq-message" name="message" rows="3" placeholder="Any specific requirements?"></textarea>
+        </div>
+        <button type="submit" class="btn btn-block">Send Enquiry</button>
+        <div class="form-msg" id="enquiryMsg"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>Adarsh Store</h4>
+        <p>Your one-stop shop for quality products at great prices. We value every customer and respond to all enquiries promptly.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Owner: Adarsh Pal</p>
+        <p>Email: jackysparrow738392@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Adarsh Store. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
