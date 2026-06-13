@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adarsh Store | Cart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Adarsh<span>Store</span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html" class="cart-link active">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="hero" style="padding: 50px 20px;">
+    <h1>Your <span>Cart</span></h1>
+    <p>Review your items and place your order. Your order details will be sent directly to us so we can confirm and arrange delivery.</p>
+  </section>
+
+  <!-- CART -->
+  <section class="section">
+    <div class="cart-wrapper" id="cartWrapper">
+      <!-- Filled dynamically by script.js -->
+    </div>
+  </section>
+
+  <!-- ORDER FORM (shown when cart has items) -->
+  <section class="section" id="orderSection" style="display:none; padding-top: 0;">
+    <div class="contact-wrapper" style="max-width: 700px;">
+      <div class="contact-form-wrap" style="padding: 36px; width: 100%;">
+        <h2 class="section-title" style="text-align:left; margin-bottom: 6px;">Place Your Order</h2>
+        <p class="section-subtitle" style="text-align:left; margin-bottom: 24px;">Enter your details below. We'll review your cart and contact you to confirm payment &amp; delivery.</p>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="order-name">Full Name</label>
+            <input type="text" id="order-name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="order-email">Email Address</label>
+            <input type="email" id="order-email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="order-phone">Phone Number</label>
+            <input type="tel" id="order-phone" name="phone" placeholder="Your phone number" required />
+          </div>
+          <div class="form-group">
+            <label for="order-message">Delivery Address / Notes</label>
+            <textarea id="order-message" name="message" rows="3" placeholder="Enter your delivery address or any special instructions"></textarea>
+          </div>
+          <button type="submit" class="btn btn-block">Place Order</button>
+          <div class="form-msg" id="orderMsg"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4>Adarsh Store</h4>
+        <p>Your one-stop shop for quality products at great prices. We value every customer and respond to all enquiries promptly.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Owner: Adarsh Pal</p>
+        <p>Email: jackysparrow738392@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Adarsh Store. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
